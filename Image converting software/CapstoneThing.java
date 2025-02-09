@@ -28,12 +28,14 @@ public class CapstoneThing{
         Scanner whatIsFilePath = new Scanner(System.in);
         System.out.println("Please Input FilePath.");
         String filePath = whatIsFilePath.nextLine();
+        whatIsFilePath.close();
         
         boolean yo = true;
         while (yo) {
             Scanner isThisCorrect = new Scanner(System.in);
             System.out.println("So the image you want to use is " + filePath + ". Correct?");
             String correctImage = isThisCorrect.nextLine();
+            isThisCorrect.close();
             if(correctImage.equalsIgnoreCase("yes")){
                 System.out.println("Sounds good, we will now continue.");
                 break;
@@ -42,6 +44,7 @@ public class CapstoneThing{
                 System.out.println("Input the actual FilePath");
                 String actualFilePath = whatIsActualFilePath.nextLine();
                 filePath = actualFilePath;
+                whatIsActualFilePath.close();
             }
         }
         TimeUnit.SECONDS.sleep(2);
@@ -56,12 +59,14 @@ public class CapstoneThing{
         Scanner whatIsFilePathOut = new Scanner(System.in);
         System.out.println("Please Input FilePathOut.");
         String filePathOut = whatIsFilePathOut.nextLine();
+        whatIsFilePathOut.close();
 
         boolean sup = true;
         while (sup) {
             Scanner isThisCorrect1 = new Scanner(System.in);
             System.out.println("So the FilePathOut you want to use is " + filePathOut + ". Correct?");
             String correctImageOut = isThisCorrect1.nextLine();
+            isThisCorrect1.close();
             if(correctImageOut.equalsIgnoreCase("yes")){
                 System.out.println("Sounds good, we will now continue.");
                 break;
@@ -70,6 +75,7 @@ public class CapstoneThing{
                 System.out.println("Input the actual FilePath");
                 String actualFilePathOut = whatIsActualFilePathOut.nextLine();
                 filePathOut = actualFilePathOut;
+                whatIsActualFilePathOut.close();
             }
         }
         TimeUnit.SECONDS.sleep(3);
@@ -95,6 +101,7 @@ public class CapstoneThing{
         Scanner wouldYouLikeColorConversion = new Scanner(System.in);
         System.out.println("Would you like to do any color conversions?");
         String colorConversion = wouldYouLikeColorConversion.nextLine();
+        wouldYouLikeColorConversion.close();
         TimeUnit.SECONDS.sleep(1);
 
         //Color Conversions
@@ -108,6 +115,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeGreyScale = new Scanner(System.in);
             System.out.println("Would you like to GreyScale the image?");
             String greyScale = wouldYouLikeGreyScale.nextLine();
+            wouldYouLikeGreyScale.close();
             TimeUnit.SECONDS.sleep(1);
             if(greyScale.equalsIgnoreCase("yes")){
                 //GreyScale
@@ -136,6 +144,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeRedScale = new Scanner(System.in);
             System.out.println("Would you like to RedScale the image?");
             String redScale = wouldYouLikeRedScale.nextLine();
+            wouldYouLikeRedScale.close();
             TimeUnit.SECONDS.sleep(1);
             if(redScale.equalsIgnoreCase("yes")){
                 //RedScale
@@ -163,6 +172,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeGreenScale = new Scanner(System.in);
             System.out.println("Would you like to GreenScale the image?");
             String greenScale = wouldYouLikeGreenScale.nextLine();
+            wouldYouLikeGreenScale.close();
             TimeUnit.SECONDS.sleep(1);
             if(greenScale.equalsIgnoreCase("yes")){
                 //GreenScale
@@ -190,6 +200,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeBlueScale = new Scanner(System.in);
             System.out.println("Would you like to BlueScale the image?");
             String blueScale = wouldYouLikeBlueScale.nextLine();
+            wouldYouLikeBlueScale.close();
             TimeUnit.SECONDS.sleep(1);
             if(blueScale.equalsIgnoreCase("yes")){
                 //BlueScale
@@ -217,6 +228,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeInvert = new Scanner(System.in);
             System.out.println("Would you like to Invert the image?");
             String invert = wouldYouLikeInvert.nextLine();
+            wouldYouLikeInvert.close();
             TimeUnit.SECONDS.sleep(1);
             if(invert.equalsIgnoreCase("yes")){
                 //Invert
@@ -249,6 +261,7 @@ public class CapstoneThing{
         Scanner wouldYouLikeRotateFlipDimension = new Scanner(System.in);
         System.out.println("Would you like to Rotate/Flip/Change the dimensions of the image?");
         String rotateFlipDimension = wouldYouLikeRotateFlipDimension.nextLine();
+        wouldYouLikeRotateFlipDimension.close();
         TimeUnit.SECONDS.sleep(1);
 
         if(rotateFlipDimension.equalsIgnoreCase("yes")){
@@ -256,16 +269,19 @@ public class CapstoneThing{
             Scanner wouldYouLikeDimension = new Scanner(System.in);
             System.out.println("Would you like to change the dimensions of the image? (change width/height)");
             String changeDimension = wouldYouLikeDimension.nextLine();
+            wouldYouLikeDimension.close();
             TimeUnit.SECONDS.sleep(1);
             if(changeDimension.equalsIgnoreCase("yes")){
 
                 Scanner whatNewWidth = new Scanner(System.in);
                 System.out.println("Insert New Width");
                 int newWidth = whatNewWidth.nextInt();
+                whatNewWidth.close();
                 TimeUnit.SECONDS.sleep(1);
                 Scanner whatNewHeight = new Scanner(System.in);
                 System.out.println("Insert New Height");
                 int newHeight = whatNewHeight.nextInt();
+                whatNewHeight.close();
                 TimeUnit.SECONDS.sleep(1);
 
                 BufferedImage redimensionedImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
@@ -279,11 +295,13 @@ public class CapstoneThing{
             Scanner wouldYouLikeRotate = new Scanner(System.in);
             System.out.println("Would you like to rotate the image?");
             String rotatoPotatoe = wouldYouLikeRotate.nextLine();
+            wouldYouLikeRotate.close();
             TimeUnit.SECONDS.sleep(1);
             if(rotatoPotatoe.equalsIgnoreCase("yes")){
                 Scanner amountToRotate = new Scanner(System.in);
                 System.out.println("How much do you want the image to rotate?");
                 double amountRotate = amountToRotate.nextDouble();
+                amountToRotate.close();
                 TimeUnit.SECONDS.sleep(1);
 
                 BufferedImage rotatedImage = new BufferedImage(result.getWidth(),result.getHeight() , BufferedImage.TYPE_INT_RGB);
@@ -298,11 +316,13 @@ public class CapstoneThing{
             Scanner wouldYouLikeFlip = new Scanner(System.in);
             System.out.println("Would you like to flip the image?");
             String flippoBippo = wouldYouLikeFlip.nextLine();
+            wouldYouLikeFlip.close();
             TimeUnit.SECONDS.sleep(1);
             if(flippoBippo.equalsIgnoreCase("yes")){
                 Scanner wouldFlipHorizontal = new Scanner(System.in);
                 System.out.println("Would you like to flip the image horizontal?");
                 String flipHorizontal = wouldFlipHorizontal.nextLine();
+                wouldFlipHorizontal.close();
                 TimeUnit.SECONDS.sleep(1);
 
                 if(flipHorizontal.equalsIgnoreCase("yes")){
@@ -324,6 +344,7 @@ public class CapstoneThing{
                 Scanner wouldFlipVertical = new Scanner(System.in);
                 System.out.println("Would you like to flip the image vertical?");
                 String flipVertical = wouldFlipVertical.nextLine();
+                wouldFlipVertical.close();
                 TimeUnit.SECONDS.sleep(1);
 
                 if(flipVertical.equalsIgnoreCase("yes")){
@@ -346,12 +367,14 @@ public class CapstoneThing{
         Scanner wouldYouLikeImageEffect = new Scanner(System.in);
         System.out.println("Would you like to add any image filters?");
         String imageEffect = wouldYouLikeImageEffect.nextLine();
+        wouldYouLikeImageEffect.close();
         TimeUnit.SECONDS.sleep(1);
         if(imageEffect.equalsIgnoreCase("yes")){
 
             Scanner wouldYouLikeSharpen = new Scanner(System.in);
             System.out.println("Would you like to sharpen the image?");
             String sharpen = wouldYouLikeSharpen.nextLine();
+            wouldYouLikeSharpen.close();
             TimeUnit.SECONDS.sleep(1);
 
             if(sharpen.equalsIgnoreCase("yes")){
@@ -376,6 +399,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeBlur = new Scanner(System.in);
             System.out.println("Would you like to blur the image?");
             String blur = wouldYouLikeBlur.nextLine();
+            wouldYouLikeBlur.close();
             TimeUnit.SECONDS.sleep(1);
             if(blur.equalsIgnoreCase("yes")){
 
@@ -399,6 +423,7 @@ public class CapstoneThing{
             Scanner wouldYouLikePixelate = new Scanner(System.in);
             System.out.println("Would you like to pixelate the image?");
             String pixelate = wouldYouLikePixelate.nextLine();
+            wouldYouLikePixelate.close();
             TimeUnit.SECONDS.sleep(1);
             if(pixelate.equalsIgnoreCase("yes")){
 
@@ -409,6 +434,7 @@ public class CapstoneThing{
                 Scanner howMuchPixelate = new Scanner(System.in);
                 System.out.println("How big do you want the pixelation to be? (Whole Numbers Only)");
                 int sizeOfPixelate = howMuchPixelate.nextInt();
+                howMuchPixelate.close();
 
                 Raster src = pixelatedImage.getData();
                 WritableRaster dest = src.createCompatibleWritableRaster();
@@ -435,6 +461,7 @@ public class CapstoneThing{
             Scanner wouldYouLikeEmboss = new Scanner(System.in);
             System.out.println("Would you like to emboss the image?");
             String emboss = wouldYouLikeEmboss.nextLine();
+            wouldYouLikeEmboss.close();
             TimeUnit.SECONDS.sleep(1);
             if(emboss.equalsIgnoreCase("yes")){
 
